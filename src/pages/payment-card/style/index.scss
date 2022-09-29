@@ -1,0 +1,117 @@
+@import url('../../../styles/_font-family.scss');
+$fontStandard:'raleway-regular', Helvetica, sans-serif;
+@mixin formPadrao{
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: Helvetica, Arial sans-serif;
+}
+@mixin containerStandard{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.payment-card-container{
+  width: 100vw;
+  height: 100vh;
+  background-color: #131030;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-width: 450px;
+      height: 500px;
+      margin-left: 30px;
+      h1{
+        font-family: $fontStandard;
+        color: #fff;
+        font-size: 1.5rem;
+        min-width: 230px;
+        max-width: 380px;
+        line-height: 30px;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+      }
+      form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        label{
+          color: #fff;
+          font-family: $fontStandard;
+          margin-bottom: .5rem;
+        }
+        .input{
+          @include formPadrao;
+          min-height: 48px;
+          background-color: #3A3378;
+          color: #fff;
+          font-size: 1rem
+        }
+        .cardholder-name-container{
+          @include containerStandard();
+        }
+        .card-number-container{
+          @include containerStandard();
+        }
+        .dualfield-container{
+          width: 100%;
+          display: flex;
+          gap: 7px;
+          .expiration-date-container{
+              @include containerStandard();
+              .input{
+                width: 100%;
+              }
+          }
+          .security-code-container{
+              @include containerStandard();
+              .input{
+                width: 100%;
+              }
+          }
+        }
+        .type-payment-container{
+          @include containerStandard();
+          select{
+            font-size: .9rem;
+          }
+        }
+        button{
+          cursor: pointer;
+          border: none;
+          outline: none;
+          transition: 0.4s ease-out;
+          min-height: 45px;
+          width: 100%;
+          height: 6%;
+          background-color: #F3E524;
+          color: #131030;
+          border-radius: 4px;
+          font-family: $fontStandard;
+          font-weight: 600;
+          font-size: 1.3rem;
+          margin-top: 30px;
+          &:hover{
+            transform: scale(1.05);
+            background-color: #cfc31c;
+          }
+          &:active{
+            transform: scale(0.95);
+          }
+        }
+      }
+    }
+  }
+}

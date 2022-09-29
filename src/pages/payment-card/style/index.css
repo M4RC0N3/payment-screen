@@ -1,0 +1,122 @@
+@import url("../../../styles/_font-family.scss");
+.payment-card-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #131030;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.payment-card-container .form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payment-card-container .form-container .form-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  height: 500px;
+  margin-left: 30px;
+}
+.payment-card-container .form-container .form-content h1 {
+  font-family: "raleway-regular", Helvetica, sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  min-width: 230px;
+  max-width: 380px;
+  line-height: 30px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.payment-card-container .form-container .form-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.payment-card-container .form-container .form-content form label {
+  color: #fff;
+  font-family: "raleway-regular", Helvetica, sans-serif;
+  margin-bottom: 0.5rem;
+}
+.payment-card-container .form-container .form-content form .input {
+  border: none;
+  outline: none;
+  padding: 0 5px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: Helvetica, Arial sans-serif;
+  min-height: 48px;
+  background-color: #3A3378;
+  color: #fff;
+  font-size: 1rem;
+}
+.payment-card-container .form-container .form-content form .cardholder-name-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.payment-card-container .form-container .form-content form .card-number-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.payment-card-container .form-container .form-content form .dualfield-container {
+  width: 100%;
+  display: flex;
+  gap: 7px;
+}
+.payment-card-container .form-container .form-content form .dualfield-container .expiration-date-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.payment-card-container .form-container .form-content form .dualfield-container .expiration-date-container .input {
+  width: 100%;
+}
+.payment-card-container .form-container .form-content form .dualfield-container .security-code-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.payment-card-container .form-container .form-content form .dualfield-container .security-code-container .input {
+  width: 100%;
+}
+.payment-card-container .form-container .form-content form .type-payment-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.payment-card-container .form-container .form-content form .type-payment-container select {
+  font-size: 0.9rem;
+}
+.payment-card-container .form-container .form-content form button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.4s ease-out;
+  min-height: 45px;
+  width: 100%;
+  height: 6%;
+  background-color: #F3E524;
+  color: #131030;
+  border-radius: 4px;
+  font-family: "raleway-regular", Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 30px;
+}
+.payment-card-container .form-container .form-content form button:hover {
+  transform: scale(1.05);
+  background-color: #cfc31c;
+}
+.payment-card-container .form-container .form-content form button:active {
+  transform: scale(0.95);
+}/*# sourceMappingURL=index.css.map */

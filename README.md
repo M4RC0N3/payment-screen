@@ -1,4 +1,5 @@
-# payment-screen
+# Intuitive payment screen
+## • Explanation
 Intuitive payment screen with automatic card brand selection
 
 ## Stacks
