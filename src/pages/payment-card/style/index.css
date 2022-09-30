@@ -119,4 +119,126 @@
 }
 .payment-card-container .form-container .form-content form button:active {
   transform: scale(0.95);
+}
+.payment-card-container .card-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.payment-card-container .card-container p {
+  font-family: "raleway-regular", Helvetica, sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+}
+.payment-card-container .card-container .card-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+.payment-card-container .card-container .card-content .card {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  width: 450px;
+  height: 260px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  border-radius: 15px;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.16));
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(17px);
+          backdrop-filter: blur(17px);
+  padding: 20px 15px 15px 20px;
+  z-index: 15;
+}
+.payment-card-container .card-container .card-content .card .card-flag-container {
+  justify-self: end;
+}
+.payment-card-container .card-container .card-content .card .card-flag-container #flags {
+  justify-self: end;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+}
+.payment-card-container .card-container .card-content .card .chip-container {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  display: flex;
+  flex-direction: row;
+}
+.payment-card-container .card-container .card-content .card .chip-container .chip {
+  background-color: #833DFE;
+  border-radius: 7px;
+  width: 65px;
+  height: 45px;
+}
+.payment-card-container .card-container .card-content .card .validity-code-container {
+  grid-row-start: 5;
+  grid-row-end: 5;
+  display: grid;
+  margin-left: 22px;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.payment-card-container .card-container .card-content .card .validity-code-container .validity-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.payment-card-container .card-container .card-content .card .validity-code-container .validity-container p:first-child {
+  font-size: 0.85rem;
+  margin-right: 12px;
+}
+.payment-card-container .card-container .card-content .card .validity-code-container .code-security-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: baseline;
+}
+.payment-card-container .card-container .card-content .card .validity-code-container .code-security-container p:first-child {
+  font-size: 0.85rem;
+  margin-right: 12px;
+}
+.payment-card-container .card-container .card-content .balls-container {
+  width: 614px;
+  height: 460px;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  z-index: 10;
+  position: relative;
+}
+.payment-card-container .card-container .card-content .balls-container .big-ball {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  right: 0;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg, #6A3EFF, #D93DCF);
+}
+.payment-card-container .card-container .card-content .balls-container .small-ball {
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  background-image: linear-gradient(#2E50E8, #712EE8, #712EE8);
+  left: 30%;
+  bottom: 55%;
+}
+.payment-card-container .card-container .card-content .balls-container .mid-ball {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg, #E4DB74, #5B01FF);
+  left: 0;
+  bottom: 2%;
 }/*# sourceMappingURL=index.css.map */

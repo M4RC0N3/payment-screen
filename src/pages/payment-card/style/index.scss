@@ -114,4 +114,122 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
       }
     }
   }
+  .card-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    p{
+      font-family: $fontStandard;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+    .card-content{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      justify-items: center;
+      align-items: center;
+      .card{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        width: 450px;
+        height: 260px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        border-radius: 15px;
+        background-image: linear-gradient(135deg, rgba(255, 255, 255, .40), rgba(255, 255, 255, 0.16));
+        border: 1px solid rgba(255, 255, 255, .60);
+        backdrop-filter: blur(17px);
+        padding: 20px 15px 15px 20px;
+        z-index: 15;
+        .card-flag-container{
+          justify-self: end;
+          #flags{
+            justify-self: end;
+            grid-row-start: 1;
+            grid-row-end: 1;
+            width:60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: white;
+          }
+        }
+        .chip-container{
+          grid-row-start: 2;
+          grid-row-end: 2;
+          display: flex;
+          flex-direction: row;
+          .chip{
+            background-color: #833DFE;
+            border-radius: 7px;
+            width: 65px;
+            height: 45px;
+          }
+        }
+        @mixin validityCode{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          p:first-child{
+            font-size: .85rem;
+            margin-right: 12px;
+          }
+        }
+        .validity-code-container{
+          grid-row-start: 5;
+          grid-row-end: 5;
+          display: grid;
+          margin-left: 22px;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          .validity-container{
+            @include validityCode();
+          }
+          .code-security-container{
+            @include validityCode();
+            align-items: baseline;
+          }
+        }
+      }
+      .balls-container{
+        width: 614px;
+        height: 460px;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        z-index: 10;
+        position: relative;
+        .big-ball{
+          position: absolute;
+          width: 250px;
+          height: 250px;
+          right: 0;
+          border-radius: 50%;
+          background-image: linear-gradient(45deg, #6A3EFF, #D93DCF);
+        }
+        .small-ball{
+          position: absolute;
+          width: 105px;
+          height: 105px;
+          border-radius: 50%;
+          background-image: linear-gradient(#2E50E8, #712EE8,#712EE8);
+          left: 30%;
+          bottom: 55%;
+        }
+        .mid-ball{
+          position: absolute;
+          width: 190px;
+          height: 190px;
+          border-radius: 50%;
+          background-image: linear-gradient(45deg, #E4DB74, #5B01FF);
+          left: 0;
+          bottom: 2%;
+        }
+      }
+    }
+  }
 }

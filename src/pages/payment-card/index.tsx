@@ -39,7 +39,39 @@ function PaymentCard() {
                 </form>
             </div>
         </div>
-        <div className="card-container"></div>
+        <div className="card-container">
+            <div className="card-content">
+                <div className="card">
+                    <div className="card-flag-container">
+                        <div id="flags"></div>
+                    </div>
+                    <div className="chip-container">
+                        <div className="chip"></div>
+                    </div>
+                    <div className="card-number-container">
+                        <p id='card-number'>0000 0000 0000 0000</p>
+                    </div>
+                    <div className="cardholder-container">
+                        <p id='cardholder'>Antonio Carlos</p>
+                    </div>
+                    <div className="validity-code-container">
+                        <div className="validity-container">
+                            <p>Validity</p>
+                            <p id='validity'>12/05</p>
+                        </div>
+                        <div className="code-security-container">
+                            <p>CVV</p>
+                            <p id='security-code'>555</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="balls-container">
+                    <div className="big-ball"></div>
+                    <div className="small-ball"></div>
+                    <div className="mid-ball"></div>
+                </div>
+            </div>
+        </div>
     </div>
   );
 }
