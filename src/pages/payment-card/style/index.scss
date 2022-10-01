@@ -58,6 +58,7 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
           background-color: #3A3378;
           color: #fff;
           font-size: 1rem
+         
         }
         .cardholder-name-container{
           @include containerStandard();
@@ -69,7 +70,7 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
           width: 100%;
           display: flex;
           gap: 7px;
-          .expiration-date-container{
+          .expire-date-container{
               @include containerStandard();
               .input{
                 width: 100%;
@@ -169,7 +170,7 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
             height: 45px;
           }
         }
-        @mixin validityCode{
+        @mixin expireCode{
           display: flex;
           flex-direction: row;
           align-items: center;
@@ -178,18 +179,18 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
             margin-right: 12px;
           }
         }
-        .validity-code-container{
+        .dual-view-container{
           grid-row-start: 5;
           grid-row-end: 5;
           display: grid;
           margin-left: 22px;
           grid-template-columns: 1fr 1fr;
           align-items: center;
-          .validity-container{
-            @include validityCode();
+          .expire-container{
+            @include expireCode();
           }
           .code-security-container{
-            @include validityCode();
+            @include expireCode();
             align-items: baseline;
           }
         }

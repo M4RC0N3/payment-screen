@@ -1,9 +1,12 @@
-import React from 'react';
-import logo from '../../logo.svg';
+import React,{useEffect} from 'react';
 import '../../styles/reset.css';
 import './style/index.css';
-
+import {Transcriber, FlagRec} from './script';
 function PaymentCard() {
+    useEffect(()=>{
+        Transcriber();
+    })
+
   return (
     <div className="payment-card-container">
         <div className="form-container">
@@ -19,9 +22,9 @@ function PaymentCard() {
                         <input id="card-number" className='input' type="text" placeholder="0000 0000 0000 0000" maxLength={31}  pattern="[0-9\s]+$" required/>
                     </div>
                     <div className='dualfield-container'>
-                        <div className='expiration-date-container'>
-                            <label htmlFor = "expiration">Expiration date</label>
-                            <input className='input' id="expiration" type="text" placeholder=" 00/0000"  name="ccexpiration"  maxLength={7}  minLength={7} pattern="\d{2}/\d{4}" title="EX: 00/0000" required/>
+                        <div className='expire-date-container'>
+                            <label htmlFor = "expire">Expire date</label>
+                            <input className='input' id="expire" type="text" placeholder=" 00/0000"  name="ccexpiration"  maxLength={7}  minLength={7} pattern="\d{2}/\d{4}" title="EX: 00/0000" required/>
                         </div>
                         <div className='security-code-container'>
                             <label htmlFor="ccv">Security code</label>
@@ -35,7 +38,7 @@ function PaymentCard() {
                             <option id="debt" value="crd">Debt</option>
                         </select>
                     </div>
-                    <button type="submit" className='button' id="pay">Pay</button>
+                    <button type="submit" className='button' id="pay" onClick={Transcriber}>Pay</button>
                 </form>
             </div>
         </div>
@@ -49,15 +52,15 @@ function PaymentCard() {
                         <div className="chip"></div>
                     </div>
                     <div className="card-number-container">
-                        <p id='card-number'>0000 0000 0000 0000</p>
+                        <p id='card-number-view'>0000 0000 0000 0000</p>
                     </div>
                     <div className="cardholder-container">
-                        <p id='cardholder'>Antonio Carlos</p>
+                        <p id='cardholher-name-view'>Antonio Carlos</p>
                     </div>
-                    <div className="validity-code-container">
-                        <div className="validity-container">
-                            <p>Validity</p>
-                            <p id='validity'>12/05</p>
+                    <div className="dual-view-container">
+                        <div className="expire-container">
+                            <p>Expire</p>
+                            <p id='expire-card-view'>12/05</p>
                         </div>
                         <div className="code-security-container">
                             <p>CVV</p>

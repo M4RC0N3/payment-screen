@@ -70,13 +70,13 @@
   display: flex;
   gap: 7px;
 }
-.payment-card-container .form-container .form-content form .dualfield-container .expiration-date-container {
+.payment-card-container .form-container .form-content form .dualfield-container .expire-date-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
 }
-.payment-card-container .form-container .form-content form .dualfield-container .expiration-date-container .input {
+.payment-card-container .form-container .form-content form .dualfield-container .expire-date-container .input {
   width: 100%;
 }
 .payment-card-container .form-container .form-content form .dualfield-container .security-code-container {
@@ -179,7 +179,7 @@
   width: 65px;
   height: 45px;
 }
-.payment-card-container .card-container .card-content .card .validity-code-container {
+.payment-card-container .card-container .card-content .card .dual-view-container {
   grid-row-start: 5;
   grid-row-end: 5;
   display: grid;
@@ -187,22 +187,22 @@
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
-.payment-card-container .card-container .card-content .card .validity-code-container .validity-container {
+.payment-card-container .card-container .card-content .card .dual-view-container .expire-container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.payment-card-container .card-container .card-content .card .validity-code-container .validity-container p:first-child {
+.payment-card-container .card-container .card-content .card .dual-view-container .expire-container p:first-child {
   font-size: 0.85rem;
   margin-right: 12px;
 }
-.payment-card-container .card-container .card-content .card .validity-code-container .code-security-container {
+.payment-card-container .card-container .card-content .card .dual-view-container .code-security-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   align-items: baseline;
 }
-.payment-card-container .card-container .card-content .card .validity-code-container .code-security-container p:first-child {
+.payment-card-container .card-container .card-content .card .dual-view-container .code-security-container p:first-child {
   font-size: 0.85rem;
   margin-right: 12px;
 }
