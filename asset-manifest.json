@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/payment-screen/static/css/main.f66aa099.css",
+    "main.js": "/payment-screen/static/js/main.2bd6862c.js",
+    "static/js/787.ee04c657.chunk.js": "/payment-screen/static/js/787.ee04c657.chunk.js",
+    "static/media/Raleway-Regular.ttf": "/payment-screen/static/media/Raleway-Regular.3927fa2a37e6f7f4c7c0.ttf",
+    "static/media/Raleway-SemiBold.ttf": "/payment-screen/static/media/Raleway-SemiBold.cc770b2afb65067aae51.ttf",
+    "static/media/hipercard.svg": "/payment-screen/static/media/hipercard.e79080a05f2c926173b536717cb22641.svg",
+    "static/media/discover.svg": "/payment-screen/static/media/discover.f45c91da945fbc9ccf0105cee6f9e6ce.svg",
+    "static/media/american-express.svg": "/payment-screen/static/media/american-express.f1e746398258333671aeec568a206045.svg",
+    "static/media/mastercard.svg": "/payment-screen/static/media/mastercard.79b8498c84060b1c87bf5ab2c1b50b5a.svg",
+    "static/media/visa.svg": "/payment-screen/static/media/visa.c20ff5510b911693c6bd5c6da312b077.svg",
+    "static/media/aura.svg": "/payment-screen/static/media/aura.b7c583e7e945a02025bdf3e257c5aec2.svg",
+    "static/media/elo.svg": "/payment-screen/static/media/elo.360352c0e9c953cf706ce280e315d2e0.svg",
+    "static/media/jcb.svg": "/payment-screen/static/media/jcb.dd0b8e247ef0a6dfcd8c30e2bdb16905.svg",
+    "static/media/dinners-club.svg": "/payment-screen/static/media/dinners-club.8f7100a1473e927b8ee32386d887e4f2.svg",
+    "index.html": "/payment-screen/index.html",
+    "main.f66aa099.css.map": "/payment-screen/static/css/main.f66aa099.css.map",
+    "main.2bd6862c.js.map": "/payment-screen/static/js/main.2bd6862c.js.map",
+    "787.ee04c657.chunk.js.map": "/payment-screen/static/js/787.ee04c657.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f66aa099.css",
+    "static/js/main.2bd6862c.js"
+  ]
+}
