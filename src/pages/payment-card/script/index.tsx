@@ -75,9 +75,7 @@ function FlagRec(){
         let CardNumberValue = CardNumber.value;
         let CardNumberQuantity = CardNumberValue.length;
         var flag = CardNumberValue.substring(0, 4)
-        console.log(CardNumberValue+CardNumberQuantity)
         if (CardNumberQuantity>=4){
-            console.log('ent')
             const VectorFlag: any=[Discover, Visa, Elo, American, DinnersClub, Hipercard, MasterCard, Jcb, Aura];
             const disableFlag = ((posi:any)=>{
                 let search = VectorFlag[posi];
