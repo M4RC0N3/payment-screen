@@ -29,7 +29,7 @@ function Transcriber(){
     const CardHolderNameView = document.getElementById('cardholher-name-view');
     const CardNumberView = document.getElementById('card-number-view');
     const CardExpireView = document.getElementById('expire-card-view');
-    const CvvCardView = document. getElementById('security-code');
+    const CvvCardView = document.getElementById('security-code');
 
     let CardViewInfo: any = [CardHolderNameView, CardNumberView, CardExpireView, CvvCardView];
     Inputs.forEach((item:any)=>{
