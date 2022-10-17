@@ -1,7 +1,9 @@
+import React,{useState} from 'react';
 const ArrowAnimation =  (FocusedInput:string)=>{
     switch(FocusedInput){
         case "name":
             console.log('arrow name');
+            return FocusedInput;
         break
 
         case "card-number":
@@ -17,13 +19,13 @@ const ArrowAnimation =  (FocusedInput:string)=>{
         break
     }
 }
+
 function Transcriber(){
     //form id's selections
     const CardholderName = document.getElementById('name');
     const CardNumber = document.getElementById('card-number');
     const CardExpire = document.getElementById('expire');
     const Cvv = document.getElementById('cvv');
-
     let Inputs: any = [CardholderName, CardNumber, CardExpire, Cvv];
     //card id's selections
     const CardHolderNameView = document.getElementById('cardholher-name-view');
@@ -35,7 +37,7 @@ function Transcriber(){
     Inputs.forEach((item:any)=>{
         let FocusedInput = item.id;
         item.addEventListener('focus', ()=>{
-            ArrowAnimation(FocusedInput);
+            /* ArrowAnimation(FocusedInput); */
             let index: number = Inputs.indexOf(item);
             //console.log(index);
             item.addEventListener('keyup', ()=>{

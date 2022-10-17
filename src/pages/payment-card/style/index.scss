@@ -20,6 +20,7 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
   background-color: #131030;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  overflow: hidden;
   .form-container{
     display: flex;
     justify-content: center;
@@ -32,6 +33,7 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
       max-width: 450px;
       height: 500px;
       margin-left: 30px;
+      margin-right: 10px;
       h1{
         font-family: $fontStandard;
         color: #fff;
@@ -119,7 +121,7 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     p{
       font-family: $fontStandard;
       font-size: 1.8rem;
@@ -131,6 +133,7 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
       grid-template-rows: 1fr;
       justify-items: center;
       align-items: center;
+      margin-right: 20px;
       .card{
         grid-column-start: 1;
         grid-column-end: 1;
@@ -148,6 +151,20 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
         z-index: 15;
         .card-flag-container{
           justify-self: end;
+          position: relative;
+          .arrow-flag-container{
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            left: -44px;
+            top: -167px;
+            p{
+              position: absolute;
+              left: 85px;
+              top: 42px;
+              font-size: 1.7rem;
+            }
+          }
           #flags{
             justify-self: end;
             grid-row-start: 1;
@@ -167,7 +184,7 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
           display: flex;
           flex-direction: row;
           .chip{
-            background-color: #833DFE;
+            background-color: #B2AFFF;
             border-radius: 7px;
             width: 65px;
             height: 45px;
@@ -177,7 +194,7 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
           display: flex;
           flex-direction: row;
           align-items: center;
-          p:first-child{
+          .expire-name, .cvv{
             font-size: .85rem;
             margin-right: 12px;
           }
@@ -190,11 +207,69 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
           grid-template-columns: 1fr 1fr;
           align-items: center;
           .expire-container{
+            position: relative;
+            .arrow-expire-container{
+              position: absolute;
+              width: 350px;
+              height: 350px;
+              top: -99px;
+              left: -22px;
+              p{
+                position: absolute;
+                left: 106px;
+                top: 203px;
+                font-size: 1.7rem;
+              }
+            }
             @include expireCode();
           }
           .code-security-container{
+            position: relative;
+            .arrow-code-container{
+              position: absolute;
+              width: 415px;
+              height: 415px;
+              top: -118px;
+              left: -37px;
+              p{
+                position: absolute;
+                left: 121px;
+                top: 244px;
+                font-size: 1.7rem;
+              }
+            }
             @include expireCode();
             align-items: baseline;
+          }
+        }
+        .card-number-container{
+          position: relative;
+          .arrow-card-number-container{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            top: -282px;
+            left: 109px;
+            p{
+              position: absolute;
+              left: 115px;
+              top: 72px;
+            }
+          }
+        }
+        .cardholder-container{
+          position: relative;
+          .arrow-cardholder-container{
+            width: 400px;
+            height: 400px;
+            left: -122px;
+            top: -65px;
+            position: absolute;
+            p{
+              position: absolute;
+              left: 129px;
+              top: 286px;
+            }
           }
         }
       }
@@ -209,11 +284,12 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
         position: relative;
         .big-ball{
           position: absolute;
-          width: 250px;
-          height: 250px;
-          right: 0;
+          width: 300px;
+          height: 300px;
+          right: 0px;
+          top: -31px;
           border-radius: 50%;
-          background-image: linear-gradient(45deg, #6A3EFF, #D93DCF);
+          background-image: linear-gradient(45deg, #D93DCF,#6A3EFF);
         }
         .small-ball{
           position: absolute;
@@ -236,4 +312,17 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
       }
     }
   }
+}
+[data-animation]{
+  opacity: 0;
+  
+}
+[data-animation="card-name-opacity"]{
+  transition: .4s ease-out 1s;
+}
+[data-animation="arrow"]{
+  transition: .4s ease-out .5s;
+}
+[data-animation].anime{
+  opacity: 1;
 }

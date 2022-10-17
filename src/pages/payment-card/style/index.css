@@ -5,6 +5,7 @@
   background-color: #131030;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  overflow: hidden;
 }
 .payment-card-container .form-container {
   display: flex;
@@ -19,6 +20,7 @@
   max-width: 450px;
   height: 500px;
   margin-left: 30px;
+  margin-right: 10px;
 }
 .payment-card-container .form-container .form-content h1 {
   font-family: "raleway-regular", Helvetica, sans-serif;
@@ -124,7 +126,7 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: end;
 }
 .payment-card-container .card-container p {
   font-family: "raleway-regular", Helvetica, sans-serif;
@@ -137,6 +139,7 @@
   grid-template-rows: 1fr;
   justify-items: center;
   align-items: center;
+  margin-right: 20px;
 }
 .payment-card-container .card-container .card-content .card {
   grid-column-start: 1;
@@ -157,6 +160,20 @@
 }
 .payment-card-container .card-container .card-content .card .card-flag-container {
   justify-self: end;
+  position: relative;
+}
+.payment-card-container .card-container .card-content .card .card-flag-container .arrow-flag-container {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  left: -44px;
+  top: -167px;
+}
+.payment-card-container .card-container .card-content .card .card-flag-container .arrow-flag-container p {
+  position: absolute;
+  left: 85px;
+  top: 42px;
+  font-size: 1.7rem;
 }
 .payment-card-container .card-container .card-content .card .card-flag-container #flags {
   justify-self: end;
@@ -177,7 +194,7 @@
   flex-direction: row;
 }
 .payment-card-container .card-container .card-content .card .chip-container .chip {
-  background-color: #833DFE;
+  background-color: #B2AFFF;
   border-radius: 7px;
   width: 65px;
   height: 45px;
@@ -191,23 +208,81 @@
   align-items: center;
 }
 .payment-card-container .card-container .card-content .card .dual-view-container .expire-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.payment-card-container .card-container .card-content .card .dual-view-container .expire-container p:first-child {
+.payment-card-container .card-container .card-content .card .dual-view-container .expire-container .arrow-expire-container {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  top: -99px;
+  left: -22px;
+}
+.payment-card-container .card-container .card-content .card .dual-view-container .expire-container .arrow-expire-container p {
+  position: absolute;
+  left: 106px;
+  top: 203px;
+  font-size: 1.7rem;
+}
+.payment-card-container .card-container .card-content .card .dual-view-container .expire-container .expire-name, .payment-card-container .card-container .card-content .card .dual-view-container .expire-container .cvv {
   font-size: 0.85rem;
   margin-right: 12px;
 }
 .payment-card-container .card-container .card-content .card .dual-view-container .code-security-container {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   align-items: baseline;
 }
-.payment-card-container .card-container .card-content .card .dual-view-container .code-security-container p:first-child {
+.payment-card-container .card-container .card-content .card .dual-view-container .code-security-container .arrow-code-container {
+  position: absolute;
+  width: 415px;
+  height: 415px;
+  top: -118px;
+  left: -37px;
+}
+.payment-card-container .card-container .card-content .card .dual-view-container .code-security-container .arrow-code-container p {
+  position: absolute;
+  left: 121px;
+  top: 244px;
+  font-size: 1.7rem;
+}
+.payment-card-container .card-container .card-content .card .dual-view-container .code-security-container .expire-name, .payment-card-container .card-container .card-content .card .dual-view-container .code-security-container .cvv {
   font-size: 0.85rem;
   margin-right: 12px;
+}
+.payment-card-container .card-container .card-content .card .card-number-container {
+  position: relative;
+}
+.payment-card-container .card-container .card-content .card .card-number-container .arrow-card-number-container {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  top: -282px;
+  left: 109px;
+}
+.payment-card-container .card-container .card-content .card .card-number-container .arrow-card-number-container p {
+  position: absolute;
+  left: 115px;
+  top: 72px;
+}
+.payment-card-container .card-container .card-content .card .cardholder-container {
+  position: relative;
+}
+.payment-card-container .card-container .card-content .card .cardholder-container .arrow-cardholder-container {
+  width: 400px;
+  height: 400px;
+  left: -122px;
+  top: -65px;
+  position: absolute;
+}
+.payment-card-container .card-container .card-content .card .cardholder-container .arrow-cardholder-container p {
+  position: absolute;
+  left: 129px;
+  top: 286px;
 }
 .payment-card-container .card-container .card-content .balls-container {
   width: 614px;
@@ -221,11 +296,12 @@
 }
 .payment-card-container .card-container .card-content .balls-container .big-ball {
   position: absolute;
-  width: 250px;
-  height: 250px;
-  right: 0;
+  width: 300px;
+  height: 300px;
+  right: 0px;
+  top: -31px;
   border-radius: 50%;
-  background-image: linear-gradient(45deg, #6A3EFF, #D93DCF);
+  background-image: linear-gradient(45deg, #D93DCF, #6A3EFF);
 }
 .payment-card-container .card-container .card-content .balls-container .small-ball {
   position: absolute;
@@ -244,4 +320,20 @@
   background-image: linear-gradient(45deg, #E4DB74, #5B01FF);
   left: 0;
   bottom: 2%;
+}
+
+[data-animation] {
+  opacity: 0;
+}
+
+[data-animation=card-name-opacity] {
+  transition: 0.4s ease-out 1s;
+}
+
+[data-animation=arrow] {
+  transition: 0.4s ease-out 0.5s;
+}
+
+[data-animation].anime {
+  opacity: 1;
 }/*# sourceMappingURL=index.css.map */

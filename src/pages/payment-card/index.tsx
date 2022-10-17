@@ -1,4 +1,10 @@
-import React,{useEffect} from 'react';
+import React,{useEffect, useState} from 'react';
+import Lottie from 'react-lottie';
+import ArrowFlag from '../../assets/animations/arrow-flag.json';
+import ArrowCardholder from '../../assets/animations/arrow-cardholder.json';
+import ArrowCardNumber from '../../assets/animations/arrow-cardnumber.json';
+import ArrowCardSecurityCode from '../../assets/animations/arrow-card-security-code.json';
+import ArrowCardExpiringDate from '../../assets/animations/arrow-card-expiring-date.json';
 import '../../styles/reset.css';
 import './style/index.css';
 import {Transcriber, FlagRec} from './script';
@@ -12,11 +18,89 @@ import Jcb from '../../assets/images/jcb.svg';
 import Mastercard from '../../assets/images/mastercard.svg';
 import Visa from '../../assets/images/visa.svg';
 function PaymentCard() {
+    const[stopArrowFlags, setStopArrowFlags] = useState(true);
+    const[stopArrowName, setStopArrowName] = useState(true);
+    const[stopArrowNumber, setStopArrowNumber] = useState(true);
+    const[stopArrowExpire, setStopArrowExpire] = useState(true);
+    const[stopArrowCode, setStopArrowCode] = useState(true);
+    const ArrowShow =  (FocusedInput:string, AnimationData:any)=>{
+        switch(FocusedInput){
+            case "name":
+                setStopArrowName(false);
+                AnimationData[2].classList.add('anime');
+            break
+    
+            case "card-number":
+                setStopArrowFlags(false);
+                setStopArrowNumber(false);
+                AnimationData[0].classList.add('anime');
+                AnimationData[1].classList.add('anime');
+            break
+    
+            case "expire":
+                setStopArrowExpire(false);
+                AnimationData[3].classList.add('anime');
+            break
+    
+            case "cvv":
+                setStopArrowCode(false);
+                AnimationData[4].classList.add('anime');
+            break
+        }
+    }
+    const ArrowHidden =  (FocusOut:string, AnimationData:any)=>{
+        switch(FocusOut){
+            case "name":
+                console.log('arrow name');
+                setStopArrowName(true);
+                AnimationData[2].classList.remove('anime');
+            break
+    
+            case "card-number":
+                console.log("arrow number");
+                setStopArrowFlags(true);
+                setStopArrowNumber(true);
+                AnimationData[0].classList.remove('anime');
+                AnimationData[1].classList.remove('anime');
+            break
+    
+            case "expire":
+                console.log("arrow expire");
+                setStopArrowExpire(true);
+                AnimationData[3].classList.remove('anime');
+            break
+    
+            case "cvv":
+                console.log("arrow cvv");
+                setStopArrowCode(true);
+                AnimationData[4].classList.remove('anime');
+            break
+        }
+    }
+    const Arrows=()=>{
+        const CardholderName = document.getElementById('name');
+        const CardNumber = document.getElementById('card-number');
+        const CardExpire = document.getElementById('expire');
+        const Cvv = document.getElementById('cvv');
+        let Inputs: any = [CardholderName, CardNumber, CardExpire, Cvv];
+        //card id's selections
+        const AnimationData = document.querySelectorAll('[data-animation]');
+        Inputs.forEach((item:any)=>{
+            let FocusedInput = item.id;
+            let FocusOut = item.id;
+            item.addEventListener('focus', ()=>{
+                ArrowShow(FocusedInput, AnimationData);
+            })
+            item.addEventListener('focusout',()=>{
+                ArrowHidden(FocusOut, AnimationData);
+            })
+        })
+    }
     useEffect(()=>{
-        Transcriber();
         FlagRec();
+        Transcriber();
+        Arrows();
     })
-
   return (
     <div className="payment-card-container">
         <div className="form-container">
@@ -56,6 +140,20 @@ function PaymentCard() {
             <div className="card-content">
                 <div className="card">
                     <div className="card-flag-container">
+                        <div className="arrow-flag-container">
+                            <p data-animation="card-name-opacity">Flags</p>
+                            <Lottie 
+                                options={{
+                                    animationData: ArrowFlag,
+                                    autoplay: false,
+                                    loop:false,
+                                    rendererSettings: {
+                                        preserveAspectRatio: 'xMidYMid slice'
+                                    }
+                                }}
+                                isStopped={stopArrowFlags}
+                            />
+                        </div>
                         <div id="flags">
                             <img id='american-express' src={AmericanExpress} width={84} height={84} alt="American Express" draggable={false} />
                             <img id='aura' src={Aura} width={84} height={84} alt="Aura" draggable={false} />
@@ -72,18 +170,74 @@ function PaymentCard() {
                         <div className="chip"></div>
                     </div>
                     <div className="card-number-container">
+                        <div className="arrow-card-number-container">
+                            <p data-animation="card-name-opacity">Card number</p>
+                            <Lottie
+                                options={{
+                                    animationData: ArrowCardNumber,
+                                    autoplay: false,
+                                    loop:false,
+                                    rendererSettings: {
+                                        preserveAspectRatio: 'xMidYMid slice'
+                                    }
+                                }}
+                                isStopped={stopArrowNumber}
+                            />
+                        </div>
                         <p id='card-number-view'>0000 0000 0000 0000</p>
                     </div>
                     <div className="cardholder-container">
+                        <div className="arrow-cardholder-container">
+                            <p data-animation="card-name-opacity">Cardholer</p>
+                            <Lottie 
+                                options={{
+                                    animationData: ArrowCardholder,
+                                    autoplay: false,
+                                    loop:false,
+                                    rendererSettings: {
+                                        preserveAspectRatio: 'xMidYMid slice'
+                                    }
+                                }}
+                                isStopped={stopArrowName}
+                            />
+                        </div>
                         <p id='cardholher-name-view'>Antonio Carlos</p>
                     </div>
                     <div className="dual-view-container">
                         <div className="expire-container">
-                            <p>Expire</p>
-                            <p id='expire-card-view'>12/05</p>
+                            <div className="arrow-expire-container">
+                                <p data-animation="card-name-opacity">Expire date</p>
+                                <Lottie
+                                    options={{
+                                        animationData: ArrowCardExpiringDate,
+                                        autoplay: false,
+                                        loop:false,
+                                        rendererSettings: {
+                                            preserveAspectRatio: 'xMidYMid slice'
+                                        }
+                                    }}
+                                    isStopped={stopArrowExpire}
+                                />
+                            </div>
+                            <p className='expire-name'>Expire</p>
+                            <p className='expire-date' id='expire-card-view'>12/05</p>
                         </div>
                         <div className="code-security-container">
-                            <p>CVV</p>
+                            <div className="arrow-code-container">
+                                <p data-animation="card-name-opacity">Code security</p>
+                                <Lottie
+                                    options={{
+                                        animationData: ArrowCardSecurityCode,
+                                        autoplay: false,
+                                        loop:false,
+                                        rendererSettings: {
+                                            preserveAspectRatio: 'xMidYMid slice'
+                                        }
+                                    }}
+                                    isStopped={stopArrowCode}
+                                />
+                            </div>
+                            <p className='cvv'>CVV</p>
                             <p id='security-code'>555</p>
                         </div>
                     </div>
