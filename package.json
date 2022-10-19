@@ -1,7 +1,7 @@
 {
   "name": "payment-screen",
   "version": "0.1.0",
-  "homepage": "payment-screen",
+  "homepage": "https://m4rc0n3.github.io/payment-screen/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
