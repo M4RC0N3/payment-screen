@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "7fcf1c760808117e3f6d",
+    "revision": "47e66d11365ba4454db7",
     "url": "/payment-screen/static/css/main.8f261ab5.chunk.css"
   },
   {
-    "revision": "7fcf1c760808117e3f6d",
-    "url": "/payment-screen/static/js/main.0b49c982.chunk.js"
+    "revision": "47e66d11365ba4454db7",
+    "url": "/payment-screen/static/js/main.2ad0c08d.chunk.js"
   },
   {
     "revision": "2d3fc3962594686c9136",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/payment-screen/static/media/Raleway-SemiBold.87641f99.ttf"
   },
   {
-    "revision": "f39f34ba223ce31758a73dcf249f32ca",
+    "revision": "66dc2ed422c41401454d8ef6ece34c0c",
     "url": "/payment-screen/index.html"
   }
 ];

@@ -1,7 +1,7 @@
 {
   "main.css": "/payment-screen/static/css/main.8f261ab5.chunk.css",
-  "main.js": "/payment-screen/static/js/main.0b49c982.chunk.js",
-  "main.js.map": "/payment-screen/static/js/main.0b49c982.chunk.js.map",
+  "main.js": "/payment-screen/static/js/main.2ad0c08d.chunk.js",
+  "main.js.map": "/payment-screen/static/js/main.2ad0c08d.chunk.js.map",
   "runtime~main.js": "/payment-screen/static/js/runtime~main.31a8ad44.js",
   "runtime~main.js.map": "/payment-screen/static/js/runtime~main.31a8ad44.js.map",
   "static/js/2.538ed1bf.chunk.js": "/payment-screen/static/js/2.538ed1bf.chunk.js",
@@ -9,7 +9,7 @@
   "static/js/3.d917a865.chunk.js": "/payment-screen/static/js/3.d917a865.chunk.js",
   "static/js/3.d917a865.chunk.js.map": "/payment-screen/static/js/3.d917a865.chunk.js.map",
   "index.html": "/payment-screen/index.html",
-  "precache-manifest.57d6ffcf662de0b4db160059216365d4.js": "/payment-screen/precache-manifest.57d6ffcf662de0b4db160059216365d4.js",
+  "precache-manifest.94d30284298daa92f3427b7c5c3f0e92.js": "/payment-screen/precache-manifest.94d30284298daa92f3427b7c5c3f0e92.js",
   "service-worker.js": "/payment-screen/service-worker.js",
   "static/css/main.8f261ab5.chunk.css.map": "/payment-screen/static/css/main.8f261ab5.chunk.css.map",
   "static/media/index.css": "/payment-screen/static/media/Raleway-SemiBold.87641f99.ttf",
