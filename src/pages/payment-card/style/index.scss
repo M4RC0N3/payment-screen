@@ -312,6 +312,18 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
       }
     }
   }
+  button{
+    display: none;
+    width: 100%;
+    background-color: #B2AFFF;
+    height: 60px;
+    color: #fff;
+    border: none;
+    align-self: flex-end;
+    font-size: 2rem;
+    font-family: $fontStandard;
+    font-weight: bold;
+  }
 }
 [data-animation]{
   opacity: 0;
@@ -326,3 +338,4 @@ $fontStandard:'raleway-regular', Helvetica, sans-serif;
 [data-animation].anime{
   opacity: 1;
 }
+@import './responsive';

@@ -18,6 +18,7 @@ import Jcb from '../../assets/images/jcb.svg';
 import Mastercard from '../../assets/images/mastercard.svg';
 import Visa from '../../assets/images/visa.svg';
 import {Transcriber, FlagRec} from './script';
+
 function PaymentCard() {
     const[stopArrowFlags, setStopArrowFlags] = useState(true);
     const[stopArrowName, setStopArrowName] = useState(true);
@@ -98,11 +99,15 @@ function PaymentCard() {
         Transcriber();
         Arrows();
     })
+    function ShowCard(){
+        const CardContainer:any = document.getElementById('card-container');
+        CardContainer.classList.toggle('show-card');
+    }
   return (
     <div className="payment-card-container">
         <div className="form-container">
             <div className="form-content">
-                <h1 className='title'>Comece a participar hoje mesmo!</h1>
+                <h1 className='title'>Payment form</h1>
                 <form action="">
                     <div className='cardholder-name-container'>
                         <label htmlFor='name'>Cardholder Name</label>
@@ -133,7 +138,7 @@ function PaymentCard() {
                 </form>
             </div>
         </div>
-        <div className="card-container">
+        <div className="card-container" id='card-container' data-show>
             <div className="card-content">
                 <div className="card">
                     <div className="card-flag-container">
@@ -246,6 +251,7 @@ function PaymentCard() {
                 </div>
             </div>
         </div>
+        <button onClick={ShowCard}>Card</button>
     </div>
   );
 }
