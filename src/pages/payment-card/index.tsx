@@ -7,7 +7,7 @@ import ArrowCardSecurityCode from '../../assets/animations/arrow-card-security-c
 import ArrowCardExpiringDate from '../../assets/animations/arrow-card-expiring-date.json';
 import '../../styles/reset.css';
 import './style/index.css';
-import {Transcriber, FlagRec} from './script';
+
 import AmericanExpress from '../../assets/images/american-express.svg';
 import Aura from '../../assets/images/aura.svg';
 import DinnersClub from '../../assets/images/dinners-club.svg';
@@ -17,6 +17,7 @@ import Hipercard from '../../assets/images/hipercard.svg';
 import Jcb from '../../assets/images/jcb.svg';
 import Mastercard from '../../assets/images/mastercard.svg';
 import Visa from '../../assets/images/visa.svg';
+import {Transcriber, FlagRec} from './script';
 function PaymentCard() {
     const[stopArrowFlags, setStopArrowFlags] = useState(true);
     const[stopArrowName, setStopArrowName] = useState(true);
@@ -51,13 +52,11 @@ function PaymentCard() {
     const ArrowHidden =  (FocusOut:string, AnimationData:any)=>{
         switch(FocusOut){
             case "name":
-                console.log('arrow name');
                 setStopArrowName(true);
                 AnimationData[2].classList.remove('anime');
             break
     
             case "card-number":
-                console.log("arrow number");
                 setStopArrowFlags(true);
                 setStopArrowNumber(true);
                 AnimationData[0].classList.remove('anime');
@@ -65,13 +64,11 @@ function PaymentCard() {
             break
     
             case "expire":
-                console.log("arrow expire");
                 setStopArrowExpire(true);
                 AnimationData[3].classList.remove('anime');
             break
     
             case "cvv":
-                console.log("arrow cvv");
                 setStopArrowCode(true);
                 AnimationData[4].classList.remove('anime');
             break

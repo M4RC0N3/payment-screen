@@ -1,25 +1,3 @@
-import React,{useState} from 'react';
-const ArrowAnimation =  (FocusedInput:string)=>{
-    switch(FocusedInput){
-        case "name":
-            console.log('arrow name');
-            return FocusedInput;
-        break
-
-        case "card-number":
-            console.log("arrow number");
-        break
-
-        case "expire":
-            console.log("arrow expire");
-        break
-
-        case "cvv":
-            console.log("arrow cvv");
-        break
-    }
-}
-
 function Transcriber(){
     //form id's selections
     const CardholderName = document.getElementById('name');
@@ -39,10 +17,8 @@ function Transcriber(){
         item.addEventListener('focus', ()=>{
             /* ArrowAnimation(FocusedInput); */
             let index: number = Inputs.indexOf(item);
-            //console.log(index);
             item.addEventListener('keyup', ()=>{
                 let TypedInfo: any = item.value;
-                //console.log("input: " + item.id + "input value: " + item.value);
                 CardViewInfo[index].innerHTML=TypedInfo
             });
         })
@@ -100,7 +76,7 @@ function FlagRec(){
                 let posi=3;
                 VectorFlag[3].style.display = 'block';
                 disableFlag(posi);
-                flag = "American Express"
+                flag = "American Express";
             }
             else if(flag.substring(0,2) == dclub[0] || flag.substring(0,2) == dclub[1]){
                 let posi=4;
@@ -150,8 +126,8 @@ function FlagRec(){
                     element.style.display='none';
                 });
             } */
-            /* console.log(flag); */
         }
     })
 }
+
 export {Transcriber,FlagRec}
