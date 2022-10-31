@@ -1,4 +1,6 @@
 import React,{useEffect, useState} from 'react';
+import InputMask from "react-input-mask";
+
 import Lottie from 'react-lottie';
 import ArrowFlag from '../../assets/animations/arrow-flag.json';
 import ArrowCardholder from '../../assets/animations/arrow-cardholder.json';
@@ -121,6 +123,7 @@ function PaymentCard() {
                         <div className='expire-date-container'>
                             <label htmlFor = "expire">Expire date</label>
                             <input className='input' id="expire" type="text" placeholder=" 00/0000"  name="ccexpiration"  maxLength={7}  minLength={7} pattern="\d{2}/\d{4}" title="EX: 00/0000" required/>
+                            <InputMask mask="9999 9999 9999 9999"  />;
                         </div>
                         <div className='security-code-container'>
                             <label htmlFor="ccv">Security code</label>
