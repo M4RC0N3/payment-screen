@@ -1,6 +1,9 @@
 # Intuitive payment screen
 ## • Explanation
 Intuitive payment screen with automatic card brand selection
+## How to run
+  Clone the app </br>
+  `npm start`
 
 ## Stacks
 <p align="center">

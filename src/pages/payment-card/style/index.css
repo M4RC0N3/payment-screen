@@ -126,7 +126,7 @@
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 .payment-card-container .card-container p {
   font-family: "raleway-regular", Helvetica, sans-serif;
