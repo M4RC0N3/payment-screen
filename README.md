@@ -1,5 +1,5 @@
 # Intuitive payment screen
-![image](https://user-images.githubusercontent.com/41484946/199066478-c52e6999-f704-4578-8be9-41bd89b6650d.png)
+![image](https://user-images.githubusercontent.com/41484946/199141047-a8617ada-2df3-42ae-b49d-010e1508b72e.png)
 ## How to access
  https://m4rc0n3.github.io/payment-screen/
 ## • Explanation
