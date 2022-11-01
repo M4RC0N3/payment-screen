@@ -56,12 +56,12 @@ self.__precacheManifest = [
     "url": "/payment-screen/static/media/visa.866a7d96.svg"
   },
   {
-    "revision": "20d41940068e45b114d32b48d684ef39",
-    "url": "/payment-screen/static/media/Raleway-Regular.20d41940.ttf"
-  },
-  {
     "revision": "87641f9900d717d6bfbf108b8755868e",
     "url": "/payment-screen/static/media/Raleway-SemiBold.87641f99.ttf"
+  },
+  {
+    "revision": "20d41940068e45b114d32b48d684ef39",
+    "url": "/payment-screen/static/media/Raleway-Regular.20d41940.ttf"
   },
   {
     "revision": "3bba2b47a2f616eded8c9f096222044e",
