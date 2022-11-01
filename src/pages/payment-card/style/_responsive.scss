@@ -1,0 +1,33 @@
+@media only screen and(max-width: 860px){
+    .payment-card-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        .form-container{
+            box-sizing: border-box;
+            padding: 0 20px;
+            .form-content{
+                margin: 0;
+            }
+        }
+        .card-container{
+            position: absolute;
+            background-color: rgba(59, 59, 59, 0.2);
+            backdrop-filter: blur(10px);
+            .card-content{
+                margin-right: 0px;
+            }
+            pointer-events: none;
+        }
+        button{
+            display: block;
+            z-index: 0;
+        }
+    }
+    [data-show]{
+        opacity: 0;
+        transition: .4s ease-out;
+    }
+    [data-show].show-card{
+        opacity: 1;
+    }
+}
