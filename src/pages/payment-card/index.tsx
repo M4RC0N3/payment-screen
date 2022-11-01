@@ -117,17 +117,16 @@ function PaymentCard() {
                     </div>
                     <div className='card-number-container'>
                         <label htmlFor='name'>Card Number</label>
-                        <input id="card-number" className='input' type="text" placeholder="0000 0000 0000 0000" maxLength={16}  pattern="[0-9\s]+$" required />
+                        <InputMask id="card-number" className='input' mask="9999 9999 9999 9999" placeholder="0000 0000 0000 0000" required />
                     </div>
                     <div className='dualfield-container'>
                         <div className='expire-date-container'>
                             <label htmlFor = "expire">Expire date</label>
-                            <input className='input' id="expire" type="text" placeholder=" 00/0000"  name="ccexpiration"  maxLength={7}  minLength={7} pattern="\d{2}/\d{4}" title="EX: 00/0000" required/>
-                            <InputMask mask="9999 9999 9999 9999"  />;
+                            <InputMask className='input' id="expire" type="text" mask="99/9999" placeholder="00/0000" required />
                         </div>
                         <div className='security-code-container'>
                             <label htmlFor="ccv">Security code</label>
-                            <input className='input division' type="text" id="cvv" placeholder=" 000" name="cccvv" title="EX: 000" maxLength={3} minLength={3}   pattern="[0-9]+$" required/>
+                            <InputMask className='input division' id="cvv" type="text" mask="999" placeholder="000" required />
                         </div>
                     </div>
                     <div className='type-payment-container'>
@@ -254,7 +253,7 @@ function PaymentCard() {
                 </div>
             </div>
         </div>
-        <button onClick={ShowCard}>Card</button>
+        <button className="button-show-card" onClick={ShowCard}>Card</button>
     </div>
   );
 }

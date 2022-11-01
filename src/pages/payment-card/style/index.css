@@ -321,7 +321,7 @@
   left: 0;
   bottom: 2%;
 }
-.payment-card-container button {
+.payment-card-container .button-show-card {
   display: none;
   width: 100%;
   background-color: #B2AFFF;
@@ -372,7 +372,7 @@
   .payment-card-container .card-container .card-content {
     margin-right: 0px;
   }
-  .payment-card-container button {
+  .payment-card-container .button-show-card {
     display: block;
     z-index: 0;
   }
