@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "66ca0f6a250658c8e74a",
-    "url": "/payment-screen/static/css/main.9479b74d.chunk.css"
+    "revision": "8af6016d0d18be3d4f62",
+    "url": "/payment-screen/static/css/main.d1fda063.chunk.css"
   },
   {
-    "revision": "66ca0f6a250658c8e74a",
-    "url": "/payment-screen/static/js/main.1e39e70b.chunk.js"
+    "revision": "8af6016d0d18be3d4f62",
+    "url": "/payment-screen/static/js/main.0f9282d2.chunk.js"
   },
   {
     "revision": "94c362c55525071917dc",
     "url": "/payment-screen/static/js/runtime~main.3869168d.js"
   },
   {
-    "revision": "636dd90506c2fe39fffa",
-    "url": "/payment-screen/static/js/2.09cd5cab.chunk.js"
+    "revision": "f6ab49c0c1fe63062831",
+    "url": "/payment-screen/static/js/2.f47496b1.chunk.js"
   },
   {
     "revision": "b00848a3e4140b9cab90",
@@ -56,15 +56,15 @@ self.__precacheManifest = [
     "url": "/payment-screen/static/media/visa.866a7d96.svg"
   },
   {
-    "revision": "87641f9900d717d6bfbf108b8755868e",
-    "url": "/payment-screen/static/media/Raleway-SemiBold.87641f99.ttf"
-  },
-  {
     "revision": "20d41940068e45b114d32b48d684ef39",
     "url": "/payment-screen/static/media/Raleway-Regular.20d41940.ttf"
   },
   {
-    "revision": "3bba2b47a2f616eded8c9f096222044e",
+    "revision": "87641f9900d717d6bfbf108b8755868e",
+    "url": "/payment-screen/static/media/Raleway-SemiBold.87641f99.ttf"
+  },
+  {
+    "revision": "98f57033183f2839806d798555e5b38b",
     "url": "/payment-screen/index.html"
   }
 ];
