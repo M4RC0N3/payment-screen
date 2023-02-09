@@ -1,4 +1,4 @@
-@media only screen and(max-width: 860px){
+@media only screen and (max-width: 860px){
     .payment-card-container{
         display: grid;
         grid-template-columns: 1fr;
@@ -14,7 +14,15 @@
             background-color: rgba(59, 59, 59, 0.2);
             backdrop-filter: blur(10px);
             .card-content{
+                width: 100%;
                 margin-right: 0px;
+                .card{
+                    div{
+                        .arrow{
+                            display: none;
+                        }
+                    }
+                }
             }
             pointer-events: none;
         }
@@ -29,5 +37,47 @@
     }
     [data-show].show-card{
         opacity: 1;
+    }
+}
+@media only screen and (max-width: 615px){
+    .payment-card-container{
+        .card-container{
+            .card-content{
+              .balls-container{
+                width: 100%;
+                .big-ball{
+                    display: none;
+                }
+                .small-ball{
+                    left: auto;
+                    right: 14%;
+                    bottom: 55%;
+                }
+              }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 495px){
+    .payment-card-container{
+        .card-container{
+            .card-content{
+                box-sizing: border-box;
+                padding: 30px;
+              .card{
+                width: 100%;
+              }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 325px){
+    .payment-card-container{
+        .card-container{
+            display: none;
+        }
+        .button-show-card{
+            display: none;
+        }
     }
 }

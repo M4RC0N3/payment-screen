@@ -144,9 +144,9 @@ function PaymentCard() {
             <div className="card-content">
                 <div className="card">
                     <div className="card-flag-container">
-                        <div className="arrow-flag-container">
+                        <div className="arrow arrow-flag-container">
                             <p data-animation="card-name-opacity">Flags</p>
-                            <Lottie 
+                            <Lottie
                                 options={{
                                     animationData: ArrowFlag,
                                     autoplay: false,
@@ -174,7 +174,7 @@ function PaymentCard() {
                         <div className="chip"></div>
                     </div>
                     <div className="card-number-container">
-                        <div className="arrow-card-number-container">
+                        <div className="arrow arrow-card-number-container">
                             <p data-animation="card-name-opacity">Card number</p>
                             <Lottie
                                 options={{
@@ -191,7 +191,7 @@ function PaymentCard() {
                         <p id='card-number-view'>0000 0000 0000 0000</p>
                     </div>
                     <div className="cardholder-container">
-                        <div className="arrow-cardholder-container">
+                        <div className="arrow arrow-cardholder-container">
                             <p data-animation="card-name-opacity">Cardholer</p>
                             <Lottie 
                                 options={{
@@ -209,7 +209,7 @@ function PaymentCard() {
                     </div>
                     <div className="dual-view-container">
                         <div className="expire-container">
-                            <div className="arrow-expire-container">
+                            <div className="arrow arrow-expire-container">
                                 <p data-animation="card-name-opacity">Expire date</p>
                                 <Lottie
                                     options={{
@@ -227,7 +227,7 @@ function PaymentCard() {
                             <p className='expire-date' id='expire-card-view'>12/05</p>
                         </div>
                         <div className="code-security-container">
-                            <div className="arrow-code-container">
+                            <div className="arrow arrow-code-container">
                                 <p data-animation="card-name-opacity">Code security</p>
                                 <Lottie
                                     options={{

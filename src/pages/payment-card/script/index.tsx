@@ -1,4 +1,3 @@
-
 function Transcriber(){
     //form id's selections
     const CardholderName = document.getElementById('name');
@@ -46,12 +45,10 @@ function FlagRec(){
     const Jcb = document.getElementById('jcb');
     const Aura = document.getElementById('aura');
     const CardNumber:any = document.getElementById('card-number');
-    const FlagsDisabled: any=[Discover, Visa, Elo, American, DinnersClub, Hipercard, MasterCard, Jcb, Aura]
-    FlagsDisabled.forEach((element:any) => {
-        element.style.display = 'none';
-    });
-    CardNumber.addEventListener('keyup', ()=>{
-        let CardNumberValue = CardNumber.value;
+
+    CardNumber.addEventListener('keyup', (event:any)=>{
+
+        let CardNumberValue = event.target.value;
         let CardNumberQuantity = CardNumberValue.length;
         var flag = CardNumberValue.substring(0, 4)
         if (CardNumberQuantity>=4){
